@@ -705,6 +705,7 @@ section.section-two .section-two-info-container {
 section.section-two .section-two-info-container .section-two-title {
   font-size: 2rem;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1024px) {

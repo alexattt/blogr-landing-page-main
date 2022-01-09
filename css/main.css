@@ -844,7 +844,8 @@ section.section-three .section-three-subinfo-container .subinfo-desc {
 
 @media screen and (max-width: 1100px) {
   section.section-three {
-    background-position: -35vw center;
+    background-size: 85vh;
+    background-position: -55vw center;
   }
 }
 

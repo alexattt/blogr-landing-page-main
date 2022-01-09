@@ -42,13 +42,9 @@ footer {
         cursor: pointer;
         transition: all 0.1s ease-in-out;
         
-        &:hover {
+        &:hover, &:focus {
           text-decoration: underline;
         }
-      }
-
-      @media screen and (max-width: 768px) {
-        line-height: 25px;
       }
     }
 

@@ -141,9 +141,11 @@ header nav .nav-links .nav-right-side .login-btn {
   transition: all 0.1s ease-in-out;
 }
 
-header nav .nav-links .nav-right-side .login-btn:hover {
-  color: white;
-  text-decoration: underline;
+@media screen and (min-width: 768px) {
+  header nav .nav-links .nav-right-side .login-btn:hover {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -922,14 +924,8 @@ footer .footer-link-container ul.sublinks li {
   transition: all 0.1s ease-in-out;
 }
 
-footer .footer-link-container ul.sublinks li:hover {
+footer .footer-link-container ul.sublinks li:hover, footer .footer-link-container ul.sublinks li:focus {
   text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
-  footer .footer-link-container ul.sublinks {
-    line-height: 25px;
-  }
 }
 
 @media screen and (max-width: 768px) {

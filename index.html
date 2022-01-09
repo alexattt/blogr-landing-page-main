@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Frontend Mentor | [Blogr]</title>
+</head>
+<body>
+  <main>
+    <header class="flex-column">
+      <nav class="flex-row">
+        <img src="./images/logo.svg" alt="blogr logo" class="logo">
+        <div class="flex-row nav-links">
+          <div class="nav-left-side flex-row">
+            <div id="menu-item-one" class="menu-item">
+              <a href="#" id="menu-title-one" class="menu-title-one menu-title" onclick="">Product</a>
+              <div id="dropdown-one" class="dropdown-menu hide-dropdown">
+                <ul class="submenu-items">
+                  <li>Overview</li>
+                  <li>Pricing</li>
+                  <li>Marketplace</li>
+                  <li>Features</li>
+                  <li>Integrations</li>
+                </ul>
+              </div>
+            </div>
+      
+            <div id="menu-item-two" class="menu-item menu-item-two">
+              <a href="#" id="menu-title-two" class="menu-title-two menu-title" onclick="">Company</a>
+              <div id="dropdown-two" class="dropdown-menu dropdown-two hide-dropdown">
+                <ul class="submenu-items">
+                  <li>About</li>
+                  <li>Team</li>
+                  <li>Blog</li>
+                  <li>Careers</li>
+                </ul>
+              </div>
+            </div>
+      
+            <div id="menu-item-three" class="menu-item menu-item-three">
+              <a href="#" id="menu-title-three" class="menu-title-three menu-title" onclick="">Connect</a>
+              <div id="dropdown-three" class="dropdown-menu dropdown-three hide-dropdown">
+                <ul class="submenu-items">
+                  <li>Contact</li>
+                  <li>Newsletter</li>
+                  <li>LinkedIn</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <hr class="break-line">
+  
+          <div class="nav-right-side flex-row">
+            <a href="#" class="login-btn">Login</a>
+            <a href="#" class="sign-up-btn">Sign Up</a>
+          </div>
+        </div>
+
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+       </div>
+      </nav>
+
+      <div class="hero-section flex-column">
+        <p class="hero-title">A modern publishing platform</p>
+        <p class="hero-desc">Grow your audience and build your online brand</p>
+        <div class="hero-btn-container flex-row">
+          <button class="start-btn">Start for Free</button>
+          <button class="learn-more-btn">Learn More</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-one">
+      <p class="section-title section-one-title">Designed for the future</p>
+      <img src="./images/illustration-editor-mobile.svg" alt="" class="mobile-illustration-one">
+      <div class="section-one-info-container flex-column">
+        <div class="section-one-subinfo section-one-subinfo-one">
+          <p class="subinfo-title subinfo-title-one">Introducing an extensible editor</p>
+          <p class="subinfo-desc subinfo-desc-one">
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.
+          </p>
+        </div>
+        <div class="section-one-subinfo section-one-subinfo-two">
+          <p class="subinfo-title subinfo-title-two">Robust content management</p>
+          <p class="subinfo-desc subinfo-desc-two">
+            Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-two flex-row">
+      <img src="./images/illustration-phones.svg" alt="phones" class="section-two-illustration">
+      <div class="section-two-info-container flex-column">
+        <p class="section-title section-two-title">State of the Art Infrastructure</p>
+        <p class="section-two-desc">
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-three flex-row">
+      <img src="./images/illustration-laptop-mobile.svg" alt="" class="mobile-illustration-two">
+      <div class="section-three-subinfo-container flex-column">
+        <div class="section-three-subinfo section-three-subinfo-one">
+          <p class="subinfo-title">Free, open, simple</p>
+          <p class="subinfo-desc">
+            Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+          </p>
+        </div>
+        <div class="section-three-subinfo section-three-subinfo-two">
+          <p class="subinfo-title">Powerful tooling</p>
+          <p class="subinfo-desc">
+            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+            capable of producing even the most complicated sites.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <img src="./images/logo.svg" alt="blogr logo" class="logo">
+      <div class="footer-link-container flex-row">
+        <div class="footer-links footer-links-one">
+          <div class="footer-links-title">
+            Product
+          </div>
+          <ul class="sublinks">
+            <li>Overview</li>
+            <li>Pricing</li>
+            <li>Marketplace</li>
+            <li>Features</li>
+            <li>Integrations</li>
+          </ul>
+        </div>
+        <div class="footer-links footer-links-two">
+          <div class="footer-links-title">
+            Company
+          </div>
+          <ul class="sublinks">
+            <li>About</li>
+            <li>Team</li>
+            <li>Blog</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="footer-links footer-links-three">
+          <div class="footer-links-title">
+            Company
+          </div>
+          <ul class="sublinks">
+            <li>Contact</li>
+            <li>Newsletter</li>
+            <li>LinkedIn</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+</html>

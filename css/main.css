@@ -1,0 +1,971 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ ***/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/*** MAIN STYLE ***/
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
+}
+
+header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60vh;
+  background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(100deg, #ff8f70 0%, #ff3d54 100%);
+  background-repeat: no-repeat;
+  background-position: 25% 53%, center center;
+  border-radius: 0px 0px 0px 100px;
+}
+
+header nav {
+  margin-top: 30px;
+}
+
+header nav .logo {
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  header nav .logo {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .logo {
+    margin-left: 0px;
+  }
+}
+
+header nav .nav-links {
+  min-width: 80vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav .nav-links .nav-left-side {
+  min-width: 30vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  header nav .nav-links .nav-left-side {
+    min-width: 35vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .nav-links .nav-left-side {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+
+header nav .nav-links .nav-right-side {
+  gap: 40px;
+  margin-right: 100px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+header nav .nav-links .nav-right-side .login-btn {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+header nav .nav-links .nav-right-side .login-btn:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  header nav .nav-links .nav-right-side .login-btn {
+    font-size: 1.25rem;
+    font-family: "Overpass", sans-serif;
+    color: #25252d;
+  }
+}
+
+header nav .nav-links .nav-right-side .sign-up-btn {
+  text-decoration: none;
+  color: #ff3d54;
+  background-color: white;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 50px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+header nav .nav-links .nav-right-side .sign-up-btn:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  header nav .nav-links .nav-right-side .sign-up-btn {
+    background-image: linear-gradient(100deg, #ff8f70 0%, #ff3d54 100%);
+    color: white;
+    padding: 18px 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header nav .nav-links .nav-right-side {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .nav-links .nav-right-side {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 0px;
+    gap: 20px;
+  }
+}
+
+header nav .nav-links .break-line {
+  height: 1px;
+  width: 100%;
+  opacity: 0.3;
+  color: #c8c8cb;
+}
+
+@media screen and (min-width: 768px) {
+  header nav .nav-links .break-line {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header nav .nav-links {
+    min-width: 75vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .nav-links {
+    position: absolute;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 65vh;
+    height: auto;
+    padding: 10px 30px;
+    right: 10%;
+    top: 8vh;
+    width: 80vw;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: -3;
+    opacity: 0;
+  }
+}
+
+header nav .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+header nav .menu-item .menu-title::after {
+  display: inline-block;
+  content: url("../images/icon-arrow-light.svg");
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  header nav .menu-item .menu-title::after {
+    content: url("../images/icon-arrow-dark.svg");
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .menu-item .menu-title {
+    font-size: 1.25rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    color: #25252d;
+  }
+  header nav .menu-item .menu-title:focus {
+    color: #4b5862;
+  }
+}
+
+header nav .menu-item .menu-title-active-desktop::after {
+  display: inline-block;
+  content: url("../images/icon-arrow-light.svg");
+  margin-left: 5px;
+  -webkit-transform: rotate(180deg) translateY(-3px);
+          transform: rotate(180deg) translateY(-3px);
+}
+
+header nav .menu-item .menu-title-active-mobile::after {
+  display: inline-block;
+  content: url("../images/icon-arrow-dark.svg");
+  margin-left: 5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header nav .menu-item a {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  header nav .menu-item a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .menu-item a {
+    color: #25252d;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .menu-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+header nav .nav-active {
+  opacity: 1;
+  z-index: 3;
+  -webkit-box-shadow: 0px 8px 30px 0px rgba(63, 63, 63, 0.3);
+          box-shadow: 0px 8px 30px 0px rgba(63, 63, 63, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+  header nav .dropdown-menu {
+    position: absolute;
+    display: none;
+    background-color: white;
+    margin-top: 40px;
+    min-width: 180px;
+    padding: 10px 50px 10px 20px;
+    border-radius: 5px;
+    line-height: 30px;
+    -webkit-box-shadow: 0px 8px 30px 0px rgba(63, 63, 63, 0.3);
+            box-shadow: 0px 8px 30px 0px rgba(63, 63, 63, 0.3);
+  }
+  header nav .dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  header nav .dropdown-menu ul li {
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  header nav .dropdown-menu ul li:hover {
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .dropdown-menu {
+    display: none;
+    min-width: 65vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(200, 200, 203, 0.3);
+    margin-top: 10px;
+  }
+  header nav .dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 40px;
+    color: rgba(48, 48, 95, 0.7);
+  }
+}
+
+header nav .show-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .burger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  header nav .burger {
+    display: block;
+  }
+}
+
+header nav .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #ebebeb;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    min-width: 90vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+header .toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .toggle .line2 {
+  opacity: 0;
+}
+
+header .toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+header .hero-section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 12vh;
+  font-family: "Overpass", sans-serif;
+  color: white;
+}
+
+header .hero-section .hero-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  header .hero-section .hero-title {
+    font-size: 2rem;
+    word-wrap: break-word;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+header .hero-section .hero-desc {
+  font-size: 1.15rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  header .hero-section .hero-desc {
+    font-size: 1rem;
+    word-wrap: break-word;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+header .hero-section .hero-btn-container {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+header .hero-section .hero-btn-container button {
+  border: none;
+  outline: none;
+  min-width: 150px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  header .hero-section .hero-btn-container button {
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header .hero-section .hero-btn-container button {
+    font-size: 0.8rem;
+    padding: 15px 18px;
+    min-width: 120px;
+  }
+}
+
+header .hero-section .hero-btn-container .start-btn {
+  background-color: white;
+  color: #ff6261;
+}
+
+header .hero-section .hero-btn-container .start-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+header .hero-section .hero-btn-container .learn-more-btn {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+header .hero-section .hero-btn-container .learn-more-btn:hover {
+  background-color: white;
+  color: #ff6261;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    background-position: 35% 45%, center center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background-image: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(100deg, #ff8f70 0%, #ff3d54 100%);
+    background-position: 35% 40%, center center;
+    min-height: 65vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header {
+    min-height: 75vh;
+  }
+}
+
+section.section-one {
+  min-height: 100vh;
+  background-color: #fcfcfc;
+  background-image: url("../images/illustration-editor-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 95vh;
+  background-position: 60vw center;
+  padding-left: 9.5vw;
+  padding-bottom: 12vh;
+  font-family: "Overpass", sans-serif;
+  color: #374468;
+}
+
+section.section-one .section-one-title {
+  text-align: center;
+  padding-top: 12vh;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  section.section-one .section-one-title {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section.section-one .section-one-title {
+    font-size: 1.6rem;
+  }
+}
+
+section.section-one .section-one-info-container {
+  width: 40vw;
+  gap: 50px;
+  padding-top: 12vh;
+  padding-bottom: 100px;
+}
+
+section.section-one .section-one-info-container .section-one-subinfo .subinfo-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  section.section-one .section-one-info-container .section-one-subinfo .subinfo-title {
+    font-size: 1.75rem;
+  }
+}
+
+section.section-one .section-one-info-container .section-one-subinfo .subinfo-desc {
+  line-height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  section.section-one .section-one-info-container .section-one-subinfo {
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section.section-one .section-one-info-container {
+    width: 32vw;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-one .section-one-info-container {
+    width: 90vw;
+    text-align: center;
+  }
+}
+
+section.section-one .mobile-illustration-one {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  section.section-one .mobile-illustration-one {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section.section-one {
+    background-position: 45vw center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-one {
+    background-image: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0vw;
+    margin-bottom: 10vh;
+  }
+}
+
+section.section-two {
+  max-height: 400px;
+  background-image: url("../images/bg-pattern-circles.svg"), linear-gradient(100deg, #2c2d3f 0%, #3f4164 100%);
+  background-position: -15vw -70vh, center center;
+  background-repeat: no-repeat;
+  border-radius: 0px 100px 0px 100px;
+}
+
+section.section-two .section-two-illustration {
+  position: relative;
+  height: 70%;
+  bottom: 70px;
+  padding-left: 7vw;
+}
+
+@media screen and (max-width: 1150px) {
+  section.section-two .section-two-illustration {
+    padding-left: 3vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-two .section-two-illustration {
+    bottom: 15vh;
+  }
+}
+
+section.section-two .section-two-info-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  width: 36vw;
+  margin-left: 5vw;
+  padding-right: 2vw;
+  font-family: "Overpass", sans-serif;
+  color: white;
+}
+
+section.section-two .section-two-info-container .section-two-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  section.section-two .section-two-info-container .section-two-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-two .section-two-info-container .section-two-title {
+    font-weight: 600;
+  }
+}
+
+section.section-two .section-two-info-container .section-two-desc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  section.section-two .section-two-info-container .section-two-desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  section.section-two .section-two-info-container {
+    margin-left: 1vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-two .section-two-info-container {
+    position: relative;
+    width: 90vw;
+    text-align: center;
+    bottom: 15vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-two {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 70vh;
+    background-size: 80vh, 100vh;
+    background-position: center -30vh, center center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  section.section-two {
+    min-height: 80vh;
+  }
+}
+
+section.section-three {
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background-color: #fcfcfc;
+  background-image: url("../images/illustration-laptop-desktop.svg");
+  background-size: 95vh;
+  background-repeat: no-repeat;
+  background-position: -14.5vw center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section.section-three .mobile-illustration-two {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  section.section-three .mobile-illustration-two {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+section.section-three .section-three-subinfo-container {
+  width: 40vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 30vw;
+  gap: 50px;
+}
+
+section.section-three .section-three-subinfo-container .subinfo-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374468;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  section.section-three .section-three-subinfo-container .subinfo-title {
+    font-size: 1.25rem;
+  }
+}
+
+section.section-three .section-three-subinfo-container .subinfo-desc {
+  line-height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  section.section-three .section-three-subinfo-container .subinfo-desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  section.section-three .section-three-subinfo-container {
+    margin-left: 40vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-three .section-three-subinfo-container {
+    width: 95vw;
+    margin-left: 0vw;
+    text-align: center;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  section.section-three {
+    background-position: -35vw center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.section-three {
+    background-image: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 0px;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 40vh;
+  background-color: #25252d;
+  color: white;
+  font-family: "Overpass", sans-serif;
+  border-radius: 0px 100px 0px 0px;
+  padding-top: 70px;
+}
+
+footer .logo {
+  height: 30px;
+  margin-left: 12vw;
+}
+
+@media screen and (max-width: 768px) {
+  footer .logo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 0vw;
+    width: 80px;
+    margin-bottom: 8vh;
+  }
+}
+
+footer .footer-link-container {
+  width: 55vw;
+  gap: 10vw;
+  margin-left: 10vw;
+}
+
+footer .footer-link-container .footer-links-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+footer .footer-link-container ul.sublinks {
+  list-style-type: none;
+  padding: 0px;
+  line-height: 30px;
+}
+
+footer .footer-link-container ul.sublinks li {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+footer .footer-link-container ul.sublinks li:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer-link-container ul.sublinks {
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer-link-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 100vw;
+    gap: 2vh;
+    margin-left: 0vw;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 70px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
